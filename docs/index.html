@@ -5,6 +5,49 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Document</title>
+
+  <style>
+    .myCookieNotice {
+      padding: 24px;
+      margin: 32px 0;
+      font-family: sans-serif;
+      display: flex;
+      border: 1px solid #ddd;
+      background: #fcfcfc;
+    }
+
+    .myCookieNotice__content {
+      margin-right: 30px;
+      flex-grow: 1;
+    }
+
+    .myCookieNotice__title {
+      margin: 0 0 12px;
+    }
+
+    .myCookieNotice__description {
+      margin: 0;
+    }
+
+    .myCookieNotice__button {
+      text-transform: uppercase;
+      text-decoration: none;
+      padding: 12px;
+      line-height: 1;
+      letter-spacing: 1px;
+      font-weight: 600;
+      font-size: 12px;
+      display: inline-block;
+      color: #444;
+      border: 1px solid #e0e0e0;
+      border-radius: 2px;
+      background: #fff;
+    }
+
+    .myCookieNotice__button:hover {
+      background: #f9f9f9;
+    }
+  </style>
 </head>
 <body>
   <h1>Cookie Notice</h1>
@@ -17,6 +60,16 @@
     <cookie-notice id="my-cookie-bar">
       We use Cookies.
       <a href="#" data-accept>I Agree</a>
+    </cookie-notice>
+    <hr />
+    <cookie-notice class="myCookieNotice" id="styled-example">
+      <div class="myCookieNotice__content">
+        <h3 class="myCookieNotice__title">Styled Example</h3>
+        <p class="myCookieNotice__description">This is an styled example for <code>customelement-cookie-notice</code>.</p>
+      </div>
+      <div>
+        <a class="myCookieNotice__button" href="#" data-accept>Yeah cool</a>
+      </div>
     </cookie-notice>
     <hr />
     <cookie-notice id="google-analytics">
